@@ -1,0 +1,24 @@
+<%
+o = db.data.findOne()
+
+print('<html><body>');
+print('Hello from JavaScript!<br/>');
+
+if (o == null) {
+    print('This is the first visit');
+    o = { 'lang': 'JavaScript', 'date': (new Date(a).toString()), 'count': 1 };
+}
+else {
+    print('Last visit was visit ' + o.count + ' from language ' + o.lang + ' on ' + o.date);
+    o['count'] = o['count'] + 1;
+    o['lang'] = 'JavaScript';
+    o['date'] = (new Date().toString());
+}
+
+db.data.save(o);
+
+print('<br/>');
+print("<a href='/javascript'>JavaScript</a> &nbsp <a href='/python'>Python</a> &nbsp; <a href='/ruby'>Ruby</a>");
+print('</body></html>');
+
+%>
