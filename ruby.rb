@@ -5,11 +5,11 @@ puts 'Hello from Ruby!<br/>'
 
 unless o
     puts 'This is the first visit'
-    o = { 'lang'=> 'ruby', 'date'=> Time.new.to_s, 'count'=> 1 }
+    o = { 'lang'=> 'Ruby', 'date'=> Time.new.to_s, 'count'=> 1 }
 else
     puts "Last visit was visit #{o['count']} from language #{o['lang']} on #{o['date']}" 
     o['count'] = o['count'] + 1
-    o['lang'] = 'ruby'
+    o['lang'] = 'Ruby'
     o['date'] = Time.new.to_s
 end
 
