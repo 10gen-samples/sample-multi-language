@@ -2,6 +2,9 @@
 o = db.data.findOne()
 
 print('<html><body>');
+
+print("<img src='geir_bird.jpg'/>");
+
 print('Hello from JavaScript!<br/>');
 
 if (o == null) {
